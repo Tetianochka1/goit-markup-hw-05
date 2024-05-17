@@ -534,7 +534,7 @@ display: flex;
  border: none;
  border-radius: 4px;
 padding: 8px 24px;
-width: 165px;
+min-width: 165px;
 height: 40px;
 font-weight: 500;
 font-size: 16px;
@@ -570,7 +570,7 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-    transition: opacity 250ms, cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms, cubic-bezier(0.4, 0, 0.2, 1);
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
     background-color: rgba(46, 47, 66, 0.4);
 }
 
@@ -584,11 +584,12 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     min-height: 584px;
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 2px 1px 0 rgba(0, 0, 0, 0.2);
     background-color: #fcfcfc;    
-    transition: transform 250ms, cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1); 
     padding-top: 72px;
     padding-right: 24px;
     padding-bottom: 24px;
     padding-left: 24px;
+   
 }
 
 .backdrop.is-open{
@@ -659,6 +660,7 @@ margin-bottom: 4px;
  padding-left: 38px;
  background-color: transparent;
  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) ;
+ outline: transparent;
 }
 
 .review-form-wrapper{
@@ -676,6 +678,7 @@ margin-bottom: 4px;
 
 .review-form-input-wrapper{
     position: relative;
+    margin-bottom: 16px;
 }
 
 .review-form-input:focus{
@@ -697,6 +700,11 @@ margin-bottom: 4px;
     resize: none;
     padding: 8px 16px;
     outline: transparent;
+    font-size: 12px; 
+    line-height: 1.17; 
+    letter-spacing: 0.04em; 
+    color: rgba(46, 47, 66, 0.4); 
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 
 .review-form-messege:focus {
@@ -762,7 +770,7 @@ color: #4d5ae5;
     min-width: 169px;
     height: 56px;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
-    background: #4d5ae5;
+    background-color: #4d5ae5;
     padding: 16px 32px;
     margin: 24px;
     font-family: "Roboto", sans-serif;
@@ -771,7 +779,8 @@ color: #4d5ae5;
     line-height: 1.5;
     letter-spacing: 0.04em;
     text-align: center;
-    color: #fff;
+    color: #ffffff;
     transform: translateX(50%);
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
 }

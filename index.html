@@ -421,8 +421,10 @@
   <div class="subscribe-form-wrapper">
   <p class="footer-info">Subscribe</p>
   <form class="subscribe-form">
-    <label for="subscribe-form-label" for="subscribe-user-email">
-    <input class="subscribe-form-input" type="email"
+    <label class="subscribe-form-label" for="subscribe-form-label">
+    <input class="subscribe-form-input"
+    id="subscribe-form-label"
+    type="email"
     name="subscribe-user-email"
     placeholder="E-mail"
     required />
@@ -430,7 +432,7 @@
     <button
      class="subscribe-btn" 
      type="submit">Subscribe
-    <svg class="subscribe-btn-icon" width="24" height="20">
+    <svg class="subscribe-btn-icon" width="24" height="24">
       <use href="./images/icons.svg#icon-send"></use>
     </svg>
     </button>
@@ -438,9 +440,13 @@
 </div>
 </div>
   </footer>
+
   <!-- -----------------BACKDROP --------------------->
-  <div class="backdrop">
+
+  <div class="backdrop is-open">
+
     <!-- is-open -->
+
     <div class="modal">
       <button class="modal-close-btn" type="button">
         <svg class="modal-close-btn-icon" width="8" height="8">
@@ -451,12 +457,12 @@
       <p class="review-form-descr">Leave your contacts and we will call you back</p>
       <form class="review-form">
         <div class="review-form-wrapper">
-          <label class="review-form-field-label" for="user-first-name" >Name</label>
+          <label class="review-form-field-label" for="user-name" >Name</label>
           <div class="review-form-input-wrapper">
           <input class="review-form-input"
           type="text"  
-          id="user-first-name" 
-          name="user-first-name"
+          id="user-name" 
+          name="user-name"
           pattern="[a-zA-Zа-яА-ЯіІїЇєЄґҐ']+"
           title="First name"
           required/>
@@ -509,23 +515,23 @@
         </div>
         <div class="review-form-checkbox-wrapper">
           <input class="review-form-checkbox visually-hidden" 
-            id="privacy-policy" 
+            id="user-privacy" 
             type="checkbox" 
-            name="privacy-policy"
+            name="user-privacy"
             value="true"
             required/>
-          <label class="review-form-checkbox-label" for="privacy-policy">
+          <label class="review-form-checkbox-label" for="user-privacy">
             <span class="review-form-own-checkbox">
               <svg class="review-form-own-checkbox-icon" width="10" height="8">
-                <use href="/images/icons.svg#icon-checkmark"></use>
+                <use href="./images/icons.svg#icon-checkmark"></use>
               </svg>
             </span>
             I accept the terms and conditions of the 
             <a class="privacy-policy-link" href="" >Privacy Policy</a>
           </label>
-          <button class="review-form-submit" type="submit">Send</button>
         </div>
-
+          <button class="review-form-submit" type="submit">Send</button>
+  
       </form>
     </div>
   </div>
